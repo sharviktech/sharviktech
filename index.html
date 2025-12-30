@@ -181,6 +181,25 @@
                 font-size: 32px
             }
         }
+
+        .footer-social {
+    margin-top: 12px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.footer-social a img {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
     </style>
 </head>
 
@@ -268,16 +287,28 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container footer-brand">
-            <img src="https://sharviktech.com/sharviktech.jpeg" alt="Sharviktech Logo">
-            <div>
-                <strong>Sharviktech</strong><br>
-                <small>Quick Pro Solutions Delivered</small><br><br>
-                <small>© 2025 Sharviktech · Privacy Policy · Terms</small>
-            </div>
-        </div>
-    </footer>
+    <div class="container footer-brand">
+        <img src="https://sharviktech.com/sharviktech.jpeg" alt="Sharviktech Logo">
+        <div>
+            <strong>Sharviktech</strong><br>
+            <small>Quick Pro Solutions Delivered</small>
 
+            <!-- SOCIAL LINKS -->
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/sharviktech"
+                   target="_blank"
+                   aria-label="Sharviktech LinkedIn">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+                         alt="LinkedIn">
+                </a>
+            </div>
+
+            <br>
+            <small>© 2025 Sharviktech · Privacy Policy · Terms</small>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
+
 
