@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Sharviktech | Quick Pro Solutions Delivered</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sharviktech delivers quick, professional web, mobile, cloud, and enterprise software solutions.">
+    <meta charset="UTF-8">
+    <title>Sharviktech | Quick Pro Solutions Delivered.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sharviktech delivers scalable web, mobile, cloud, and enterprise software solutions for startups and growing businesses.">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -12,303 +12,299 @@
         :root {
             --primary: #4f46e5;
             --secondary: #06b6d4;
+            --header-bg: #eef2ff;
             --dark: #0f172a;
             --muted: #64748b;
             --bg: #f8fafc;
             --card: #ffffff;
         }
 
-        * {
-            box-sizing: border-box
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
-            font-family: Inter,system-ui;
+            font-family: 'Inter', system-ui, sans-serif;
             background: var(--bg);
             color: var(--dark);
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none
+            line-height: 1.65;
         }
 
         h1, h2, h3 {
-            line-height: 1.3
+            text-align: center;
+            margin-top: 0;
         }
+
+        p {
+            color: var(--muted);
+            text-align: center;
+        }
+
+        a { text-decoration: none; }
 
         .container {
             max-width: 1150px;
             margin: auto;
-            padding: 24px
+            padding: 24px;
         }
 
+        /* Buttons */
         .btn {
-            padding: 14px 22px;
+            padding: 14px 24px;
             border-radius: 12px;
             font-weight: 700;
-            background: linear-gradient(135deg,var(--primary),var(--secondary));
             color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transition: .2s;
             display: inline-block;
         }
 
-            .btn.outline {
-                background: #fff;
-                border: 2px solid var(--primary);
-                color: var(--primary);
-            }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0,0,0,.15);
+        }
 
+        .btn.outline {
+            background: #fff;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        /* HEADER */
         header {
             position: sticky;
             top: 0;
-            background: #fff;
-            border-bottom: 1px solid #e5e7eb;
-            z-index: 10;
+            z-index: 100;
+            background: linear-gradient(135deg, #eef2ff, #ecfeff);
+            border-bottom: 1px solid #dbeafe;
         }
 
         .header-wrap {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .brand {
             display: flex;
-            align-items: center;
             gap: 12px;
+            align-items: center;
         }
 
-            .brand img {
-                height: 48px;
-                width: auto;
-            }
+        .brand img {
+            height: 48px;
+            border-radius: 8px;
+        }
+
+        .brand strong {
+            font-size: 20px;
+            color: var(--primary);
+        }
 
         nav a {
-            margin-left: 22px;
+            margin-left: 14px;
+            padding: 10px 18px;
+            border-radius: 999px;
             font-weight: 600;
-            color: var(--muted);
+            color: #4338ca;
+            transition: all .25s ease;
         }
 
+        nav a:hover {
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 6px 18px rgba(79,70,229,.25);
+        }
+
+        /* HERO */
         .hero {
-            background: linear-gradient(135deg,#eef2ff,#ecfeff);
-            border-radius: 24px;
-            padding: 70px 40px;
             margin-top: 40px;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #eef2ff, #ecfeff);
+            border-radius: 28px;
+            text-align: center;
         }
 
-            .hero h1 {
-                font-size: 42px
-            }
+        .hero h1 {
+            font-size: 44px;
+            max-width: 800px;
+            margin: auto;
+        }
 
-            .hero p {
-                max-width: 720px;
-                color: var(--muted)
-            }
+        .hero p {
+            max-width: 760px;
+            margin: 16px auto 0;
+            font-size: 17px;
+        }
 
         .badges span {
             display: inline-block;
+            margin: 6px;
             padding: 6px 14px;
-            background: #fff;
             border-radius: 999px;
+            background: #fff;
             font-size: 13px;
-            margin-right: 8px;
             font-weight: 600;
             color: var(--primary);
         }
 
-        section {
-            margin-top: 80px
+        section { margin-top: 90px; }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            gap: 28px;
         }
+
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
         .card {
             background: var(--card);
-            padding: 26px;
-            border-radius: 18px;
+            padding: 30px;
+            border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,.06);
             transition: .25s;
+            text-align: center;
         }
 
-            .card:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 18px 40px rgba(0,0,0,.08);
-            }
-
-        .grid {
-            display: grid;
-            gap: 26px
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0,0,0,.08);
         }
 
-        .grid-2 {
-            grid-template-columns: repeat(2,1fr)
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(3,1fr)
-        }
-
+        /* FOOTER */
         footer {
-            margin-top: 90px;
+            margin-top: 100px;
             background: #020617;
             color: #cbd5f5;
-            padding: 50px 0;
+            padding: 60px 0;
         }
-
-            footer small {
-                color: #94a3b8
-            }
 
         .footer-brand {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 12px;
-        }
-
-            .footer-brand img {
-                height: 42px;
-            }
-
-        @media(max-width:900px) {
-            .grid-2, .grid-3 {
-                grid-template-columns: 1fr
-            }
-
-            nav {
-                display: none
-            }
-
-            .hero h1 {
-                font-size: 32px
-            }
+            gap: 14px;
+            text-align: center;
         }
 
         .footer-social {
-    margin-top: 12px;
-    display: flex;
-    gap: 14px;
-    align-items: center;
-}
+            display: flex;
+            gap: 18px;
+        }
 
-.footer-social a img {
-    width: 26px;
-    height: 26px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
+        .footer-social img {
+            width: 26px;
+            filter: brightness(0) invert(1);
+            transition: opacity .2s;
+        }
 
-.footer-social a:hover img {
-    transform: scale(1.1);
-    opacity: 0.8;
-}
+        .footer-social img:hover { opacity: .7; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            nav { display: none; }
+            .grid-3 { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 32px; }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container header-wrap">
-            <div class="brand">
-                <img src="https://sharviktech.com/sharviktech.jpeg" alt="Sharviktech Logo">
-                <div>
-                    <strong style="font-size:20px">Sharviktech</strong><br>
-                    <small style="color:var(--muted)">Quick Pro Solutions Delivered</small>
-                </div>
-            </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#technologies">Technologies</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="container">
-        <div class="hero">
-            <div class="badges">
-                <span>Web</span><span>Mobile</span><span>Cloud</span><span>Enterprise</span>
-            </div>
-            <h1>We Build Reliable Digital Products That Scale Your Business</h1>
-            <p>
-                Sharviktech is a professional technology partner for startups and SMBs.
-                We deliver high-quality web, mobile, and cloud solutions with speed,
-                clarity, and long-term support.
-            </p>
-            <div style="margin-top:28px">
-                <a href="mailto:hello@sharviktech.com?subject=Project%20Inquiry%20-%20Sharviktech"
-                   class="btn">Get Free Consultation</a>
-                <a href="#portfolio" class="btn outline" style="margin-left:12px">View Portfolio</a>
+<header>
+    <div class="container header-wrap">
+        <div class="brand">
+            <img src="https://sharviktech.com/sharviktech.jpeg" alt="Sharviktech Logo">
+            <div>
+                <strong>Sharviktech</strong><br>
+                <small>Quick Pro Solutions Delivered.</small>
             </div>
         </div>
-    </section>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#technologies">Technologies</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
-    <!-- ABOUT -->
-    <section id="about" class="container">
-        <h2>About Sharviktech</h2>
-        <p style="color:var(--muted);max-width:900px">
-            We are a focused engineering team helping businesses turn ideas into
-            scalable, secure, and maintainable software.
-        </p>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="container">
-        <h2>Our Services</h2>
-        <div class="grid grid-3">
-            <div class="card"><h3>Web Development</h3><p>Angular & React applications.</p></div>
-            <div class="card"><h3>Backend Development</h3><p>.NET Core & Java APIs.</p></div>
-            <div class="card"><h3>Mobile Apps</h3><p>Cross-platform mobile solutions.</p></div>
-            <div class="card"><h3>Cloud & DevOps</h3><p>Azure & AWS deployments.</p></div>
-            <div class="card"><h3>Database Solutions</h3><p>SQL Server, MySQL, Oracle.</p></div>
-            <div class="card"><h3>IT Consulting</h3><p>Architecture & performance reviews.</p></div>
+<section class="container">
+    <div class="hero">
+        <div class="badges">
+            <span>Web Development</span>
+            <span>Mobile Apps</span>
+            <span>Cloud & DevOps</span>
+            <span>Enterprise Systems</span>
         </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="container">
-        <h2>Our Portfolio</h2>
-        <div class="grid grid-2">
-            <div class="card"><strong>Healthcare SaaS</strong><p>Angular + .NET Core</p></div>
-            <div class="card"><strong>Logistics App</strong><p>Cross-platform mobile solution</p></div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="container">
-        <div class="hero">
-            <h2>Let’s Build Something Great Together</h2>
-            <p>We reply within 48 hours.</p>
-            <a href="mailto:hello@sharviktech.com" class="btn">Contact Us</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-    <div class="container footer-brand">
-        <img src="https://sharviktech.com/sharviktech.jpeg" alt="Sharviktech Logo">
-        <div>
-            <strong>Sharviktech</strong><br>
-            <small>Quick Pro Solutions Delivered</small>
-
-            <!-- SOCIAL LINKS -->
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/company/sharviktech"
-                   target="_blank"
-                   aria-label="Sharviktech LinkedIn">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-                         alt="LinkedIn">
-                </a>
-            </div>
-
-            <br>
-            <small>© 2025 Sharviktech · Privacy Policy · Terms</small>
+        <h1>Engineering Reliable Software Products That Help Businesses Scale</h1>
+        <p>We build secure, scalable, and future-ready digital solutions.</p>
+        <div style="margin-top:32px">
+            <a href="mailto:hello@sharviktech.com" class="btn">Get Free Consultation</a>
+            <a href="#portfolio" class="btn outline" style="margin-left:14px">View Our Work</a>
         </div>
     </div>
+</section>
+
+<section id="services" class="container">
+    <h2>Our Services</h2>
+    <div class="grid grid-3">
+        <div class="card"><h3>Web Development</h3><p>Modern Angular & React applications.</p></div>
+        <div class="card"><h3>Backend & APIs</h3><p>.NET Core & Java enterprise systems.</p></div>
+        <div class="card"><h3>Mobile Apps</h3><p>Cross-platform iOS & Android apps.</p></div>
+        <div class="card"><h3>Cloud & DevOps</h3><p>AWS, Azure, CI/CD pipelines.</p></div>
+        <div class="card"><h3>Databases</h3><p>SQL Server, MySQL, Oracle.</p></div>
+        <div class="card"><h3>IT Consulting</h3><p>Architecture & performance reviews.</p></div>
+    </div>
+</section>
+
+<section id="technologies" class="container">
+    <h2>Technologies We Use</h2>
+    <div class="grid grid-3">
+        <div class="card">Angular, React, TypeScript</div>
+        <div class="card">.NET Core, Java, REST APIs</div>
+        <div class="card">AWS, Azure, Docker</div>
+    </div>
+</section>
+
+<section id="portfolio" class="container">
+    <h2>Selected Work</h2>
+    <div class="grid grid-3">
+        <div class="card"><strong>Healthcare SaaS Platform</strong><p>Enterprise healthcare system.</p></div>
+        <div class="card"><strong>Logistics Tracking App</strong><p>Real-time fleet tracking.</p></div>
+        <div class="card"><strong>Education Software Solution</strong><p>LMS & analytics platform.</p></div>
+        <div class="card"><strong>Retail Software Solution</strong><p>POS & inventory system.</p></div>
+        <div class="card"><strong>Financial Services Platform</strong><p>Secure fintech solution.</p></div>
+    </div>
+</section>
+
+<section id="contact" class="container">
+    <div class="hero">
+        <h2>Let’s Build Something Great Together</h2>
+        <p>We’ll respond within 48 hours.</p>
+        <a href="mailto:hello@sharviktech.com" class="btn">Contact Sharviktech</a>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container footer-brand">
+        <img src="https://sharviktech.com/sharviktech.jpeg" height="44">
+        <strong>Sharviktech</strong>
+        <small>Quick Pro Solutions Delivered.</small>
+
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/company/sharviktech" target="_blank" aria-label="Sharviktech LinkedIn">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg">
+        </div>
+
+        <small>© 2025 Sharviktech. All rights reserved.</small>
+    </div>
 </footer>
+
 </body>
 </html>
-
-
