@@ -20,192 +20,64 @@
         }
 
         * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            font-family: 'Inter', system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--dark);
-            line-height: 1.65;
-        }
-
-        h1, h2, h3 {
-            text-align: center;
-            margin-top: 0;
-        }
-
-        p {
-            color: var(--muted);
-            text-align: center;
-        }
-
+        body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--dark); line-height: 1.65; }
+        h1, h2, h3 { text-align: center; margin-top: 0; }
+        p { color: var(--muted); text-align: center; }
         a { text-decoration: none; }
-
-        .container {
-            max-width: 1150px;
-            margin: auto;
-            padding: 24px;
-        }
+        .container { max-width: 1150px; margin: auto; padding: 24px; }
 
         /* Buttons */
-        .btn {
-            padding: 14px 24px;
-            border-radius: 12px;
-            font-weight: 700;
-            color: #fff;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            transition: .2s;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0,0,0,.15);
-        }
-
-        .btn.outline {
-            background: #fff;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
+        .btn { padding: 14px 24px; border-radius: 12px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); transition: .2s; display: inline-block; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,.15); }
+        .btn.outline { background: #fff; color: var(--primary); border: 2px solid var(--primary); }
 
         /* HEADER */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: linear-gradient(135deg, #eef2ff, #ecfeff);
-            border-bottom: 1px solid #dbeafe;
-        }
-
-        .header-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .brand {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .brand img {
-            height: 48px;
-            border-radius: 8px;
-        }
-
-        .brand strong {
-            font-size: 20px;
-            color: var(--primary);
-        }
-
-        nav a {
-            margin-left: 14px;
-            padding: 10px 18px;
-            border-radius: 999px;
-            font-weight: 600;
-            color: #4338ca;
-            transition: all .25s ease;
-        }
-
-        nav a:hover {
-            color: #fff;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            box-shadow: 0 6px 18px rgba(79,70,229,.25);
-        }
+        header { position: sticky; top: 0; z-index: 100; background: linear-gradient(135deg, #eef2ff, #ecfeff); border-bottom: 1px solid #dbeafe; }
+        .header-wrap { display: flex; align-items: center; justify-content: space-between; }
+        .brand { display: flex; gap: 12px; align-items: center; }
+        .brand img { height: 48px; border-radius: 8px; }
+        .brand strong { font-size: 20px; color: var(--primary); }
+        nav a { margin-left: 14px; padding: 10px 18px; border-radius: 999px; font-weight: 600; color: #4338ca; transition: all .25s ease; }
+        nav a:hover { color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: 0 6px 18px rgba(79,70,229,.25); }
 
         /* HERO */
-        .hero {
-            margin-top: 40px;
-            padding: 80px 40px;
-            background: linear-gradient(135deg, #eef2ff, #ecfeff);
-            border-radius: 28px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 44px;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .hero p {
-            max-width: 760px;
-            margin: 16px auto 0;
-            font-size: 17px;
-        }
-
-        .badges span {
-            display: inline-block;
-            margin: 6px;
-            padding: 6px 14px;
-            border-radius: 999px;
-            background: #fff;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--primary);
-        }
+        .hero { margin-top: 40px; padding: 80px 40px; background: linear-gradient(135deg, #eef2ff, #ecfeff); border-radius: 28px; text-align: center; animation: fadeIn 1s ease-in; }
+        .hero h1 { font-size: 44px; max-width: 800px; margin: auto; }
+        .hero p { max-width: 760px; margin: 16px auto 0; font-size: 17px; }
+        .badges span { display: inline-block; margin: 6px; padding: 6px 14px; border-radius: 999px; background: #fff; font-size: 13px; font-weight: 600; color: var(--primary); }
 
         section { margin-top: 90px; }
 
         /* GRID */
-        .grid {
-            display: grid;
-            gap: 28px;
-        }
-
+        .grid { display: grid; gap: 28px; }
         .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-        .card {
-            background: var(--card);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.06);
-            transition: .25s;
-            text-align: center;
-        }
+        /* CARD WITH ANIMATION */
+        .card { background: var(--card); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.06); transition: .25s; text-align: center; opacity: 0; transform: translateY(20px); }
+        .card.visible { opacity: 1; transform: translateY(0); transition: all 0.6s ease-out; }
+        .card img { width: 100px; border-radius: 12px; margin-bottom: 14px; }
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 40px rgba(0,0,0,.08);
-        }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,.08); }
+
+        /* TABS */
+        .tabs { display: flex; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; gap: 10px; }
+        .tab { padding: 12px 24px; border-radius: 999px; cursor: pointer; font-weight: 600; background: #fff; border: 2px solid var(--primary); transition: all .3s; }
+        .tab.active { background: var(--primary); color: #fff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
 
         /* FOOTER */
-        footer {
-            margin-top: 100px;
-            background: #020617;
-            color: #cbd5f5;
-            padding: 60px 0;
-        }
-
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 14px;
-            text-align: center;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 18px;
-        }
-
-        .footer-social img {
-            width: 26px;
-            filter: brightness(0) invert(1);
-            transition: opacity .2s;
-        }
-
+        footer { margin-top: 100px; background: #020617; color: #cbd5f5; padding: 60px 0; }
+        .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+        .footer-social { display: flex; gap: 18px; }
+        .footer-social img { width: 26px; filter: brightness(0) invert(1); transition: opacity .2s; }
         .footer-social img:hover { opacity: .7; }
 
         /* Responsive */
-        @media (max-width: 900px) {
-            nav { display: none; }
-            .grid-3 { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 32px; }
-        }
+        @media (max-width: 900px) { nav { display: none; } .grid-3 { grid-template-columns: 1fr; } .hero h1 { font-size: 32px; } }
+
+        /* Animations */
+        @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px);} 100% { opacity: 1; transform: translateY(0);} }
     </style>
 </head>
 
@@ -243,35 +115,96 @@
 
 <section id="services" class="container">
     <h2>Our Services</h2>
-    <div class="grid grid-3">
-        <div class="card"><h3>Web Development</h3><p>Modern Angular & React applications.</p></div>
-        <div class="card"><h3>Backend & APIs</h3><p>.NET Core & Java enterprise systems.</p></div>
-        <div class="card"><h3>Mobile Apps</h3><p>Cross-platform iOS & Android apps.</p></div>
-        <div class="card"><h3>Cloud & DevOps</h3><p>AWS, Azure, CI/CD pipelines.</p></div>
-        <div class="card"><h3>Databases</h3><p>SQL Server, MySQL, Oracle.</p></div>
-        <div class="card"><h3>IT Consulting</h3><p>Architecture & performance reviews.</p></div>
+    <div class="tabs">
+        <div class="tab active" data-tab="web">Web</div>
+        <div class="tab" data-tab="mobile">Mobile</div>
+        <div class="tab" data-tab="cloud">Cloud & DevOps</div>
+        <div class="tab" data-tab="it">IT & Database</div>
+    </div>
+
+    <div id="web" class="tab-content active">
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/react-native.png"/><h3>Web Development</h3><p>Modern Angular & React applications.</p></div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/api.png"/><h3>Backend & APIs</h3><p>.NET Core & Java enterprise systems.</p></div>
+    </div>
+
+    <div id="mobile" class="tab-content">
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/android-studio.png"/><h3>Mobile Apps</h3><p>Cross-platform iOS & Android apps.</p></div>
+    </div>
+
+    <div id="cloud" class="tab-content">
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/cloud.png"/><h3>Cloud & DevOps</h3><p>AWS, Azure, CI/CD pipelines.</p></div>
+    </div>
+
+    <div id="it" class="tab-content">
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/database.png"/><h3>Databases</h3><p>SQL Server, MySQL, Oracle.</p></div>
+	<div class="card"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Consulting-icon.png" alt="IT Consulting"/>
+    <h3>IT Consulting</h3>
+    <p>Architecture & performance reviews.</p>
+</div>
+</div>
     </div>
 </section>
 
 <section id="technologies" class="container">
     <h2>Technologies We Use</h2>
     <div class="grid grid-3">
-        <div class="card">Angular, React, TypeScript</div>
-        <div class="card">.NET Core, Java, REST APIs</div>
-        <div class="card">AWS, Azure, Docker</div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/angularjs.png"/><p>Angular, React, TypeScript</p></div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png"/><p>.NET Core, Java, REST APIs</p></div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/amazon-web-services.png"/><p>AWS, Azure, Docker</p></div>
     </div>
 </section>
 
 <section id="portfolio" class="container">
     <h2>Selected Work</h2>
     <div class="grid grid-3">
-        <div class="card"><strong>Healthcare SaaS Platform</strong><p>Enterprise healthcare system.</p></div>
-        <div class="card"><strong>Logistics Tracking App</strong><p>Real-time fleet tracking.</p></div>
-        <div class="card"><strong>Education Software Solution</strong><p>LMS & analytics platform.</p></div>
-        <div class="card"><strong>Retail Software Solution</strong><p>POS & inventory system.</p></div>
-        <div class="card"><strong>Financial Services Platform</strong><p>Secure fintech solution.</p></div>
+        <div class="card">
+            <div class="card-content">
+                <img src="https://img.icons8.com/color/96/000000/health-book.png" alt="Healthcare SaaS Platform"/>
+                <strong>Healthcare SaaS Platform</strong>
+                <p>Enterprise healthcare system.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <img src="https://img.icons8.com/color/96/000000/school.png" alt="Education Software Solution"/>
+                <strong>Education Software Solution</strong>
+                <p>LMS & analytics platform.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <img src="https://img.icons8.com/color/96/000000/shop.png" alt="Retail Software Solution"/>
+                <strong>Retail Software Solution</strong>
+                <p>POS & inventory system.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <img src="https://img.icons8.com/color/96/000000/bank.png" alt="Financial Services Platform"/>
+                <strong>Financial Services Platform</strong>
+                <p>Secure fintech solution.</p>
+            </div>
+        </div>
     </div>
 </section>
+
+<style>
+/* Align image and text inside cards */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers everything horizontally */
+    text-align: center;  /* ensures text is centered */
+    gap: 12px;           /* spacing between image, title, and text */
+}
+
+.card-content img {
+    width: 96px;         /* consistent image size */
+    height: 96px;
+    object-fit: contain;
+}
+</style>
+
 
 <section id="contact" class="container">
     <div class="hero">
@@ -281,7 +214,6 @@
     </div>
 </section>
 
-
 <footer>
     <div class="container footer-brand">
         <img src="https://sharviktech.com/sharviktech.jpeg" height="44">
@@ -290,16 +222,44 @@
 
         <div class="footer-social">
             <a href="https://www.linkedin.com/company/sharviktech" target="_blank" aria-label="Sharviktech LinkedIn">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
+            </a>
+            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"></a>
+            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"></a>
+            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"></a>
         </div>
 
         <small>© 2025 Sharviktech. All rights reserved.</small>
     </div>
 </footer>
 
+<script>
+    // Tabs functionality
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            contents.forEach(c => c.classList.remove('active'));
+            document.getElementById(tab.dataset.tab).classList.add('active');
+
+            // trigger fade-in animation for new tab cards
+            document.querySelectorAll('.tab-content.active .card').forEach((card, i) => {
+                setTimeout(() => { card.classList.add('visible'); }, i * 150);
+            });
+        });
+    });
+
+    // Initial fade-in
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.card').forEach((card, i) => {
+            setTimeout(() => { card.classList.add('visible'); }, i * 150);
+        });
+    });
+</script>
+
 </body>
 </html>
-
