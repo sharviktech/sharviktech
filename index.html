@@ -238,33 +238,73 @@
 
 
 <section id="contact" class="container">
-    <div class="hero">
-        <h2>Let’s Build Something Great Together</h2>
-			<form
-                action="https://formsubmit.co/sharviktech@gmail.com"
-                method="POST"
-              >
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                />
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-                <button type="submit">Send Message</button>
-              </form>
+    <div class="hero" style="padding:60px 40px; border-radius:20px;">
+        <h2>Contact Sharviktech</h2>
+        <p>We’ll respond within 48 hours. Send us a message and let's start building something great!</p>
+
+        <form
+            action="https://formsubmit.co/9605c817aa64f7c430e9ad6c11d52108"
+            method="POST"
+            class="contact-form"
+        >
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </div>
 </section>
+
+<style>
+/* Contact form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 24px auto 0;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px 18px;
+    border: 2px solid #dbeafe;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(79,70,229,0.25);
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: fit-content;
+    align-self: center;
+    padding: 14px 32px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .contact-form button {
+        width: 100%;
+    }
+}
+</style>
+
 
 <footer>
     <div class="container footer-brand">
@@ -276,9 +316,6 @@
             <a href="https://www.linkedin.com/company/sharviktech" target="_blank" aria-label="Sharviktech LinkedIn">
                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
             </a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"></a>
         </div>
 
         <small>© 2025 Sharviktech. All rights reserved.</small>
@@ -315,4 +352,3 @@
 
 </body>
 </html>
-
