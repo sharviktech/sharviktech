@@ -240,8 +240,29 @@
 <section id="contact" class="container">
     <div class="hero">
         <h2>Let’s Build Something Great Together</h2>
-        <p>We’ll respond within 48 hours.</p>
-        <a href="mailto:hello@sharviktech.com" class="btn">Contact Sharviktech</a>
+			<form
+                action="https://formsubmit.co/sharviktech@gmail.com"
+                method="POST"
+              >
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+                <button type="submit">Send Message</button>
+              </form>
     </div>
 </section>
 
@@ -294,3 +315,4 @@
 
 </body>
 </html>
+
