@@ -78,6 +78,103 @@
 
         /* Animations */
         @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px);} 100% { opacity: 1; transform: translateY(0);} }
+
+        /* About section styling */
+        #about .hero {
+            background: linear-gradient(135deg, #eef2ff, #ecfeff);
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+            line-height: 1.7;
+        }
+        #about .hero h2 {
+            font-size: 36px;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+        #about .hero p {
+            max-width: 800px;
+            margin: 12px auto;
+            color: var(--dark);
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        /* Card content */
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .card-content img {
+            width: 96px;
+            height: 96px;
+            object-fit: contain;
+        }
+
+        /* Smaller technology cards */
+        #technologies .card, #ai-data .card {
+            padding: 20px;
+        }
+
+        #technologies .card img, #ai-data .card img {
+            width: 72px;
+            height: 72px;
+        }
+
+        #technologies p, #ai-data p {
+            font-size: 14px;
+        }
+
+        /* Contact form styling */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 24px auto 0;
+            gap: 16px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 14px 18px;
+            border: 2px solid #dbeafe;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(79,70,229,0.25);
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: fit-content;
+            align-self: center;
+            padding: 14px 32px;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 700px) {
+            .contact-form button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -107,7 +204,7 @@
         <h1>Engineering Reliable Software Products That Help Businesses Scale</h1>
         <p>We build secure, scalable, and future-ready digital solutions.</p>
         <div style="margin-top:32px">
-            <a href="mailto:hello@sharviktech.com" class="btn">Get Free Consultation</a>
+            <a href="#contact" class="btn">Get Free Consultation</a>
             <a href="#portfolio" class="btn outline" style="margin-left:14px">View Our Work</a>
         </div>
     </div>
@@ -121,28 +218,6 @@
         <p>At Sharviktech, our mission is to solve real business challenges through technology. We design and develop software that enhances operational efficiency, improves user experience, and supports long-term business growth. By combining technical expertise with transparent communication and structured processes, we aim to be a trusted technology partner for our clients.</p>
     </div>
 </section>
-
-<style>
-    /* About section styling */
-    #about .hero {
-        background: linear-gradient(135deg, #eef2ff, #ecfeff);
-        text-align: center;
-        animation: fadeIn 1s ease-in;
-        line-height: 1.7;
-    }
-    #about .hero h2 {
-        font-size: 36px;
-        margin-bottom: 24px;
-        color: var(--primary);
-    }
-    #about .hero p {
-        max-width: 800px;
-        margin: 12px auto;
-        color: var(--dark);
-        font-size: 16px;
-        text-align: justify;
-    }
-</style>
 
 <section id="services" class="container">
     <h2>Our Services</h2>
@@ -168,11 +243,10 @@
 
     <div id="it" class="tab-content">
         <div class="card"><img src="https://img.icons8.com/color/96/000000/database.png"/><h3>Databases</h3><p>SQL Server, MySQL, Oracle.</p></div>
-	<div class="card"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Consulting-icon.png" alt="IT Consulting"/>
-    <h3>IT Consulting</h3>
-    <p>Architecture & performance reviews.</p>
-</div>
-</div>
+        <div class="card"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Consulting-icon.png" alt="IT Consulting"/>
+            <h3>IT Consulting</h3>
+            <p>Architecture & performance reviews.</p>
+        </div>
     </div>
 </section>
 
@@ -181,12 +255,37 @@
     <div class="grid grid-3">
         <div class="card"><img src="https://img.icons8.com/color/96/000000/angularjs.png"/><p>Angular, React, TypeScript</p></div>
         <div class="card"><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png"/><p>.NET Core, Java, REST APIs</p></div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/python.png"/><p>Python</p></div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/nodejs.png"/><p>Node.js</p></div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/graphql.png"/><p>GraphQL</p></div>
         <div class="card"><img src="https://img.icons8.com/color/96/000000/amazon-web-services.png"/><p>AWS, Azure, Docker</p></div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/kubernetes.png"/><p>Kubernetes</p></div>
+        <div class="card"><img src="https://img.icons8.com/color/96/000000/terraform.png"/><p>Terraform</p></div>
+    </div>
+</section>
+
+<section id="ai-data" class="container">
+    <h2>AI, Data & Automation</h2>
+    <div class="grid grid-3">
+        <div class="card">
+            <div class="card-content">
+                <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="AI Integration"/>
+                <strong>AI Integration</strong>
+                <p>Integrate intelligent AI features into apps.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <img src="https://cdn-icons-png.flaticon.com/512/8365/8365406.png" alt="Machine Learning"/>
+                <strong>Machine Learning</strong>
+                <p>Predictive models & analytics for smarter decisions.</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="portfolio" class="container">
-    <h2>Selected Work</h2>
+    <h2>Our Works</h2>
     <div class="grid grid-3">
         <div class="card">
             <div class="card-content">
@@ -219,28 +318,10 @@
     </div>
 </section>
 
-<style>
-/* Align image and text inside cards */
-.card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* centers everything horizontally */
-    text-align: center;  /* ensures text is centered */
-    gap: 12px;           /* spacing between image, title, and text */
-}
-
-.card-content img {
-    width: 96px;         /* consistent image size */
-    height: 96px;
-    object-fit: contain;
-}
-</style>
-
-
 <section id="contact" class="container">
     <div class="hero" style="padding:60px 40px; border-radius:20px;">
         <h2>Contact Sharviktech</h2>
-        <p>We’ll respond within 48 hours. Send us a message and let's start building something great!</p>
+        <p>Send us a message and let's start building something great!</p>
 
         <form
             action="https://formsubmit.co/9605c817aa64f7c430e9ad6c11d52108"
@@ -254,57 +335,6 @@
         </form>
     </div>
 </section>
-
-<style>
-/* Contact form styling */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 24px auto 0;
-    gap: 16px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 14px 18px;
-    border: 2px solid #dbeafe;
-    border-radius: 12px;
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-    transition: all 0.3s ease;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(79,70,229,0.25);
-}
-
-.contact-form textarea {
-    min-height: 140px;
-    resize: vertical;
-}
-
-.contact-form button {
-    width: fit-content;
-    align-self: center;
-    padding: 14px 32px;
-    font-weight: 700;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-@media (max-width: 700px) {
-    .contact-form button {
-        width: 100%;
-    }
-}
-</style>
-
 
 <footer>
     <div class="container footer-brand">
@@ -335,14 +365,12 @@
             contents.forEach(c => c.classList.remove('active'));
             document.getElementById(tab.dataset.tab).classList.add('active');
 
-            // trigger fade-in animation for new tab cards
             document.querySelectorAll('.tab-content.active .card').forEach((card, i) => {
                 setTimeout(() => { card.classList.add('visible'); }, i * 150);
             });
         });
     });
 
-    // Initial fade-in
     window.addEventListener('load', () => {
         document.querySelectorAll('.card').forEach((card, i) => {
             setTimeout(() => { card.classList.add('visible'); }, i * 150);
