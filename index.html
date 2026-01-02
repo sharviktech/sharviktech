@@ -75,7 +75,10 @@
         .footer-social img:hover { opacity: .7; }
 
         /* Responsive */
-        @media (max-width: 900px) { nav { display: none; } .grid-3 { grid-template-columns: 1fr; } .hero h1 { font-size: 32px; } }
+        @media (max-width: 900px) { nav { display: none; } .grid-3 { grid-template-columns: 1fr; }
+            .grid-4 {
+                grid-template-columns: 1fr;
+            } .hero h1 { font-size: 32px; } }
 
         /* Animations */
         @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px);} 100% { opacity: 1; transform: translateY(0);} }
@@ -176,182 +179,314 @@
                 width: 100%;
             }
         }
+
+        .services-section {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+        .technology-section {
+            padding: 120px 20px;
+            background: #f8fafc;
+        }
+
+        .work-section {
+            padding: 120px 20px;
+            background: #f8fafc;
+        }
+
+.services-section .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.section-header p {
+  max-width: 700px;
+  margin: 15px auto 0;
+  font-size: 16px;
+  color: #64748b;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #4f46e5;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.services-cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
     </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container header-wrap">
-        <div class="brand">
-            <img src="https://sharviktech.com/sharviktech.jpeg" alt="Sharviktech Logo">
-            <div>
-                <strong>Sharviktech</strong><br>
-                <small>Quick Pro Solutions Delivered.</small>
+    <header>
+        <div class="container header-wrap">
+            <div class="brand">
+                <img src="https://sharviktech.com/sharviktech.jpeg" alt="Sharviktech Logo">
+                <div>
+                    <strong>Sharviktech</strong><br>
+                    <small>Quick Pro Solutions Delivered.</small>
+                </div>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#technologies">Technologies</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="hero">
+            <h1>Engineering Reliable Software Products That Help Businesses Scale</h1>
+            <p>We build secure, scalable, and future-ready digital solutions.</p>
+            <div style="margin-top:32px">
+                <a href="#contact" class="btn">Get Free Consultation</a>
+                <a href="#portfolio" class="btn outline" style="margin-left:14px">View Our Work</a>
             </div>
         </div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#technologies">Technologies</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
+    </section>
 
-<section class="container">
-    <div class="hero">
-        <h1>Engineering Reliable Software Products That Help Businesses Scale</h1>
-        <p>We build secure, scalable, and future-ready digital solutions.</p>
-        <div style="margin-top:32px">
-            <a href="#contact" class="btn">Get Free Consultation</a>
-            <a href="#portfolio" class="btn outline" style="margin-left:14px">View Our Work</a>
+    <section id="about" class="container">
+        <div class="hero" style="padding:60px 40px; border-radius:20px;">
+            <h2>About Us</h2>
+            <p>Sharviktech is a growing IT consulting and software development company committed to delivering reliable, scalable, and cost-effective technology solutions to businesses across industries.</p>
+            <p>We partner with startups, small and medium enterprises, and growing organizations to transform ideas into robust, high-quality digital products. Our approach focuses on understanding business objectives, applying the right technologies, and delivering solutions that are secure, maintainable, and future-ready.</p>
+            <p>At Sharviktech, our mission is to solve real business challenges through technology. We design and develop software that enhances operational efficiency, improves user experience, and supports long-term business growth. By combining technical expertise with transparent communication and structured processes, we aim to be a trusted technology partner for our clients.</p>
+            <p>Our team brings strong expertise across web development, backend engineering, cloud platforms, and modern frameworks such as .NET, Java, Nodejs, Python, Angular, React, GraphQL, AWS and Azure, . We follow industry best practices in architecture, security, and performance optimization to ensure our solutions scale seamlessly as business needs evolve.</p>
+            <p>What sets Sharviktech apart is our commitment to collaboration and accountability. We work closely with stakeholders at every stage of the project lifecycle—from ideation and design to development, deployment, and ongoing support. Regular communication, clear timelines, and quality-driven delivery are central to how we operate.</p>
+            <p>As a technology partner, we focus not just on delivering software, but on creating long-term value. Our goal is to empower businesses with solutions that are efficient today, adaptable tomorrow, and aligned with their long-term vision for growth and innovation.</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="about" class="container">
-    <div class="hero" style="padding:60px 40px; border-radius:20px;">
-        <h2>About Us</h2>
-        <p>Sharviktech is a growing IT consulting and software development company committed to delivering reliable, scalable, and cost-effective technology solutions to businesses across industries.</p>
-        <p>We partner with startups, small and medium enterprises, and growing organizations to transform ideas into robust, high-quality digital products. Our approach focuses on understanding business objectives, applying the right technologies, and delivering solutions that are secure, maintainable, and future-ready.</p>
-        <p>At Sharviktech, our mission is to solve real business challenges through technology. We design and develop software that enhances operational efficiency, improves user experience, and supports long-term business growth. By combining technical expertise with transparent communication and structured processes, we aim to be a trusted technology partner for our clients.</p>
-    </div>
-</section>
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>
+                    Sharviktech delivers reliable, scalable, and future-ready technology solutions
+                    that help businesses innovate, grow, and stay competitive.
+                </p>
+            </div>
 
-<section id="services" class="container">
-    <h2>Our Services</h2>
-    <div class="tabs">
-        <div class="tab active" data-tab="web">Web</div>
-        <div class="tab" data-tab="mobile">Mobile</div>
-        <div class="tab" data-tab="cloud">Cloud & DevOps</div>
-        <div class="tab" data-tab="it">IT & Database</div>
-    </div>
+            <div class="services-grid">
 
-    <div id="web" class="tab-content active">
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/react-native.png"/><h3>Web Development</h3><p>Modern Angular & React applications.</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/api.png"/><h3>Backend & APIs</h3><p>.NET Core & Java enterprise systems.</p></div>
-    </div>
+                <div class="service-card">
+                    <h3>Web Application Development</h3>
+                    <p>
+                        We design and develop high-performance, responsive web applications using
+                        modern technologies like Angular and React. Our solutions focus on usability,
+                        security, and scalability to support long-term business growth.
+                    </p>
+                </div>
 
-    <div id="mobile" class="tab-content">
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/android-studio.png"/><h3>Mobile Apps</h3><p>Cross-platform iOS & Android apps.</p></div>
-    </div>
+                <div class="service-card">
+                    <h3>Backend & API Development</h3>
+                    <p>
+                        Our backend experts build robust, secure, and scalable APIs using .NET and Java.
+                        We ensure seamless integration, optimized performance, and enterprise-grade reliability.
+                    </p>
+                </div>
 
-    <div id="cloud" class="tab-content">
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/cloud.png"/><h3>Cloud & DevOps</h3><p>AWS, Azure, CI/CD pipelines.</p></div>
-    </div>
+                <div class="service-card">
+                    <h3>Mobile App Development</h3>
+                    <p>
+                        From MVPs to enterprise applications, we create intuitive and high-quality
+                        mobile apps for Android and iOS with a strong focus on performance and user experience.
+                    </p>
+                </div>
 
-    <div id="it" class="tab-content">
-        <div class="card"><img src="https://icons.iconarchive.com/icons/iconsmind/outline/128/Consulting-icon.png" alt="IT Consulting"/>
-            <h3>IT Consulting</h3>
-            <p>Architecture & performance reviews.</p>
+                <div class="service-card">
+                    <h3>Cloud & DevOps Solutions</h3>
+                    <p>
+                        We help businesses leverage cloud platforms like AWS and Azure with DevOps best practices,
+                        enabling faster deployments, improved scalability, and reduced operational costs.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>IT Consulting & Architecture</h3>
+                    <p>
+                        Our consulting services guide startups and enterprises in choosing the right
+                        technology stack, system architecture, and development strategy to achieve business goals.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Database Design & Optimization</h3>
+                    <p>
+                        We design, manage, and optimize databases such as SQL Server, Oracle, and MySQL,
+                        ensuring data security, performance, and reliability.
+                    </p>
+                </div>
+
+            </div>
+
+          
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="technologies" class="container">
-    <h2>Technologies We Use</h2>
-    <div class="grid grid-3">
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/angularjs.png"/><p>Angular, React, TypeScript</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png"/><p>.NET Core, Java, REST APIs</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/python.png"/><p>Python</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/nodejs.png"/><p>Node.js</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/graphql.png"/><p>GraphQL</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/amazon-web-services.png"/><p>AWS, Azure, Docker</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/kubernetes.png"/><p>Kubernetes</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/terraform.png"/><p>Terraform</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="AI Integration"/><p>Integrate intelligent AI features into apps.</p></div>
-        <div class="card"><img src="https://img.icons8.com/color/96/000000/database.png"/><h3>Databases</h3><p>SQL Server, MySQL, Oracle.</p></div>
-    </div>
-</section>
 
-<section id="portfolio" class="container">
-    <h2>Our Works</h2>
-    <div class="grid grid-4">
-        <div class="card">
-            <div class="card-content">
-                <img src="https://img.icons8.com/color/96/000000/health-book.png" alt="Healthcare SaaS Platform"/>
-                <strong>Healthcare SaaS Platform</strong>
-                <p>Enterprise healthcare system.</p>
+    <section id="technologies" class="container technology-section">
+        <div class="section-header">
+            <h2>Technologies We Use</h2>
+        </div>
+        
+        <div class="grid grid-3">
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/angularjs.png" /><p>Angular, React, TypeScript</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png" /><p>.NET Core, Java, REST APIs</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/python.png" /><p>Python</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/nodejs.png" /><p>Node.js</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/graphql.png" /><p>GraphQL</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/amazon-web-services.png" /><p>AWS, Azure, Docker</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/kubernetes.png" /><p>Kubernetes</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/terraform.png" /><p>Terraform</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="AI Integration" /><p>Integrate intelligent AI features into apps.</p></div>
+            <div class="card"><img src="https://img.icons8.com/color/96/000000/database.png" /><h3>Databases</h3><p>SQL Server, MySQL, Oracle.</p></div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="container work-section">
+        <div class="section-header">
+            <h2>Our Works</h2>
+        </div>
+        <div class="grid grid-4">
+            <div class="card">
+                <div class="card-content">
+                    <img src="https://img.icons8.com/color/96/000000/health-book.png" alt="Healthcare SaaS Platform" />
+                    <strong>Healthcare SaaS Platform</strong>
+                    <p>Enterprise healthcare system.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="https://img.icons8.com/color/96/000000/school.png" alt="Education Software Solution" />
+                    <strong>Education Software Solution</strong>
+                    <p>LMS & analytics platform.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="https://img.icons8.com/color/96/000000/bank.png" alt="Financial Services Platform" />
+                    <strong>Financial Services Platform</strong>
+                    <p>Secure fintech solution.</p>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-content">
-                <img src="https://img.icons8.com/color/96/000000/school.png" alt="Education Software Solution"/>
-                <strong>Education Software Solution</strong>
-                <p>LMS & analytics platform.</p>
+    </section>
+
+    <section id="contact" class="container">
+        <div class="hero" style="padding:60px 40px; border-radius:20px;">
+                <h2 style="font-size:36px">Contact Sharviktech</h2>
+                <p>Send us a message and let's start building something great!</p>
+
+                <form action="https://formsubmit.co/9605c817aa64f7c430e9ad6c11d52108"
+                      method="POST"
+                      class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <img src="https://img.icons8.com/color/96/000000/bank.png" alt="Financial Services Platform"/>
-                <strong>Financial Services Platform</strong>
-                <p>Secure fintech solution.</p>
-            </div>
-        </div>
-    </div>
 </section>
 
-<section id="contact" class="container">
-    <div class="hero" style="padding:60px 40px; border-radius:20px;">
-        <h2>Contact Sharviktech</h2>
-        <p>Send us a message and let's start building something great!</p>
+    <footer>
+        <div class="container footer-brand">
+            <img src="https://sharviktech.com/sharviktech.jpeg" height="44">
+            <strong>Sharviktech</strong>
+            <small>Quick Pro Solutions Delivered.</small>
 
-        <form
-            action="https://formsubmit.co/9605c817aa64f7c430e9ad6c11d52108"
-            method="POST"
-            class="contact-form"
-        >
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
-</section>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/sharviktech" target="_blank" aria-label="Sharviktech LinkedIn">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
+                </a>
+            </div>
 
-<footer>
-    <div class="container footer-brand">
-        <img src="https://sharviktech.com/sharviktech.jpeg" height="44">
-        <strong>Sharviktech</strong>
-        <small>Quick Pro Solutions Delivered.</small>
-
-        <div class="footer-social">
-            <a href="https://www.linkedin.com/company/sharviktech" target="_blank" aria-label="Sharviktech LinkedIn">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
-            </a>
+            <small>© 2025 Sharviktech. All rights reserved.</small>
         </div>
+    </footer>
 
-        <small>© 2025 Sharviktech. All rights reserved.</small>
-    </div>
-</footer>
+    <script>
+        // Tabs functionality
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
 
-<script>
-    // Tabs functionality
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+                contents.forEach(c => c.classList.remove('active'));
+                document.getElementById(tab.dataset.tab).classList.add('active');
 
-            contents.forEach(c => c.classList.remove('active'));
-            document.getElementById(tab.dataset.tab).classList.add('active');
+                document.querySelectorAll('.tab-content.active .card').forEach((card, i) => {
+                    setTimeout(() => { card.classList.add('visible'); }, i * 150);
+                });
+            });
+        });
 
-            document.querySelectorAll('.tab-content.active .card').forEach((card, i) => {
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.card').forEach((card, i) => {
                 setTimeout(() => { card.classList.add('visible'); }, i * 150);
             });
         });
-    });
-
-    window.addEventListener('load', () => {
-        document.querySelectorAll('.card').forEach((card, i) => {
-            setTimeout(() => { card.classList.add('visible'); }, i * 150);
-        });
-    });
-</script>
+    </script>
 
 </body>
 </html>
