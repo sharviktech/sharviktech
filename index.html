@@ -280,6 +280,28 @@
                 .btn-primary:hover {
                     background: #4338ca;
                 }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px; /* Maintains spacing */
+            flex-wrap: wrap; /* Allows stacking */
+            justify-content: center; /* Center on mobile */
+        }
+
+            .hero-buttons a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 180px; /* Keeps button size consistent */
+            }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column; /* Stack vertically */
+                gap: 14px; /* Vertical spacing */
+            }
+        }
+
     </style>
 </head>
 
@@ -308,10 +330,11 @@
         <div class="hero">
             <h1>Engineering Reliable Software Products That Help Businesses Scale</h1>
             <p>We build secure, scalable and future-ready digital solutions.</p>
-            <div style="margin-top:32px">
+            <div class="hero-buttons">
                 <a href="#contact" class="btn">Get Free Consultation</a>
                 <a href="#portfolio" class="btn outline" style="margin-left:14px">View Our Work</a>
             </div>
+          
         </div>
     </section>
 
@@ -406,7 +429,7 @@
             <div class="card"><img src="https://img.icons8.com/color/96/000000/python.png" /><p>Python</p></div>
             <div class="card"><img src="https://img.icons8.com/color/96/000000/nodejs.png" /><p>Node.js</p></div>
             <div class="card"><img src="https://img.icons8.com/color/96/000000/graphql.png" /><p>GraphQL</p></div>
-            <div class="card"><img src="https://img.icons8.com/color/96/000000/amazon-web-services.png" /><p>AWS, Azure, Docker</p></div>
+            <div class="card"><img src="https://cdn-icons-png.flaticon.com/512/606/606796.png" /><p>AWS, Azure, Docker</p></div>
             <div class="card"><img src="https://img.icons8.com/color/96/000000/kubernetes.png" /><p>Kubernetes</p></div>
             <div class="card"><img src="https://img.icons8.com/color/96/000000/terraform.png" /><p>Terraform</p></div>
             <div class="card"><img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="AI Integration" /><p>Integrate intelligent AI features into apps.</p></div>
