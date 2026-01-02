@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Sharviktech | Quick Pro Solutions Delivered.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sharviktech delivers scalable web, mobile, cloud, and enterprise software solutions for startups and growing businesses.">
+    <meta name="description" content="Sharviktech delivers scalable web, mobile, cloud and enterprise software solutions for startups and growing businesses.">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -78,7 +78,10 @@
         @media (max-width: 900px) { nav { display: none; } .grid-3 { grid-template-columns: 1fr; }
             .grid-4 {
                 grid-template-columns: 1fr;
-            } .hero h1 { font-size: 32px; } }
+            } .hero h1 { font-size: 32px; }
+
+
+        }
 
         /* Animations */
         @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px);} 100% { opacity: 1; transform: translateY(0);} }
@@ -100,173 +103,183 @@
             margin: 12px auto;
             color: var(--dark);
             font-size: 16px;
-            text-align: justify;
+            text-align: left;
         }
 
-        /* Card content */
-        .card-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 12px;
-        }
-
-        .card-content img {
-            width: 96px;
-            height: 96px;
-            object-fit: contain;
-        }
-
-        /* Smaller technology cards */
-        #technologies .card, #ai-data .card {
-            padding: 20px;
-        }
-
-        #technologies .card img, #ai-data .card img {
-            width: 72px;
-            height: 72px;
-        }
-
-        #technologies p, #ai-data p {
-            font-size: 14px;
-        }
-
-        /* Contact form styling */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            max-width: 600px;
-            margin: 24px auto 0;
-            gap: 16px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 14px 18px;
-            border: 2px solid #dbeafe;
-            border-radius: 12px;
-            font-size: 16px;
-            font-family: 'Inter', sans-serif;
-            transition: all 0.3s ease;
-            outline: none;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(79,70,229,0.25);
-        }
-
-        .contact-form textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .contact-form button {
-            width: fit-content;
-            align-self: center;
-            padding: 14px 32px;
-            font-weight: 700;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 700px) {
-            .contact-form button {
-                width: 100%;
+        @media (min-width: 768px) {
+            #about .hero p {
+                max-width: 800px;
+                margin: 12px auto;
+                color: var(--dark);
+                font-size: 16px;
+                text-align: justify;
             }
         }
 
-        .services-section {
-  padding: 80px 20px;
-  background: #f8fafc;
-}
+            /* Card content */
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 12px;
+            }
 
-        .technology-section {
-            padding: 120px 20px;
-            background: #f8fafc;
-        }
+                .card-content img {
+                    width: 96px;
+                    height: 96px;
+                    object-fit: contain;
+                }
 
-        .work-section {
-            padding: 120px 20px;
-            background: #f8fafc;
-        }
+            /* Smaller technology cards */
+            #technologies .card, #ai-data .card {
+                padding: 20px;
+            }
 
-.services-section .container {
-  max-width: 1200px;
-  margin: auto;
-}
+                #technologies .card img, #ai-data .card img {
+                    width: 72px;
+                    height: 72px;
+                }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
+            #technologies p, #ai-data p {
+                font-size: 14px;
+            }
 
-.section-header h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #0f172a;
-}
+            /* Contact form styling */
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+                margin: 24px auto 0;
+                gap: 16px;
+            }
 
-.section-header p {
-  max-width: 700px;
-  margin: 15px auto 0;
-  font-size: 16px;
-  color: #64748b;
-}
+                .contact-form input,
+                .contact-form textarea {
+                    padding: 14px 18px;
+                    border: 2px solid #dbeafe;
+                    border-radius: 12px;
+                    font-size: 16px;
+                    font-family: 'Inter', sans-serif;
+                    transition: all 0.3s ease;
+                    outline: none;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
+                    .contact-form input:focus,
+                    .contact-form textarea:focus {
+                        border-color: var(--primary);
+                        box-shadow: 0 4px 12px rgba(79,70,229,0.25);
+                    }
 
-.service-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
+                .contact-form textarea {
+                    min-height: 140px;
+                    resize: vertical;
+                }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
+                .contact-form button {
+                    width: fit-content;
+                    align-self: center;
+                    padding: 14px 32px;
+                    font-weight: 700;
+                    border-radius: 12px;
+                    cursor: pointer;
+                }
 
-.service-card h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: #4f46e5;
-}
+            @media (max-width: 700px) {
+                .contact-form button {
+                    width: 100%;
+                }
+            }
 
-.service-card p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #475569;
-}
+            .services-section {
+                padding: 80px 20px;
+                background: #f8fafc;
+            }
 
-.services-cta {
-  text-align: center;
-  margin-top: 50px;
-}
+            .technology-section {
+                padding: 120px 20px;
+                background: #f8fafc;
+            }
 
-.btn-primary {
-  display: inline-block;
-  padding: 14px 36px;
-  background: #4f46e5;
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: 30px;
-  transition: background 0.3s ease;
-}
+            .work-section {
+                padding: 120px 20px;
+                background: #f8fafc;
+            }
 
-.btn-primary:hover {
-  background: #4338ca;
-}
+            .services-section .container {
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .section-header {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+                .section-header h2 {
+                    font-size: 36px;
+                    font-weight: 700;
+                    color: #0f172a;
+                }
+
+                .section-header p {
+                    max-width: 700px;
+                    margin: 15px auto 0;
+                    font-size: 16px;
+                    color: #64748b;
+                }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+            }
+
+            .service-card {
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 14px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease;
+            }
+
+                .service-card:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+                }
+
+                .service-card h3 {
+                    font-size: 20px;
+                    margin-bottom: 12px;
+                    color: #4f46e5;
+                }
+
+                .service-card p {
+                    font-size: 15px;
+                    line-height: 1.7;
+                    color: #475569;
+                }
+
+            .services-cta {
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .btn-primary {
+                display: inline-block;
+                padding: 14px 36px;
+                background: #4f46e5;
+                color: #ffffff;
+                font-weight: 600;
+                border-radius: 30px;
+                transition: background 0.3s ease;
+            }
+
+                .btn-primary:hover {
+                    background: #4338ca;
+                }
     </style>
 </head>
 
@@ -294,7 +307,7 @@
     <section class="container">
         <div class="hero">
             <h1>Engineering Reliable Software Products That Help Businesses Scale</h1>
-            <p>We build secure, scalable, and future-ready digital solutions.</p>
+            <p>We build secure, scalable and future-ready digital solutions.</p>
             <div style="margin-top:32px">
                 <a href="#contact" class="btn">Get Free Consultation</a>
                 <a href="#portfolio" class="btn outline" style="margin-left:14px">View Our Work</a>
@@ -305,12 +318,12 @@
     <section id="about" class="container">
         <div class="hero" style="padding:60px 40px; border-radius:20px;">
             <h2>About Us</h2>
-            <p>Sharviktech is a growing IT consulting and software development company committed to delivering reliable, scalable, and cost-effective technology solutions to businesses across industries.</p>
-            <p>We partner with startups, small and medium enterprises, and growing organizations to transform ideas into robust, high-quality digital products. Our approach focuses on understanding business objectives, applying the right technologies, and delivering solutions that are secure, maintainable, and future-ready.</p>
-            <p>At Sharviktech, our mission is to solve real business challenges through technology. We design and develop software that enhances operational efficiency, improves user experience, and supports long-term business growth. By combining technical expertise with transparent communication and structured processes, we aim to be a trusted technology partner for our clients.</p>
-            <p>Our team brings strong expertise across web development, backend engineering, cloud platforms, and modern frameworks such as .NET, Java, Nodejs, Python, Angular, React, GraphQL, AWS and Azure, . We follow industry best practices in architecture, security, and performance optimization to ensure our solutions scale seamlessly as business needs evolve.</p>
-            <p>What sets Sharviktech apart is our commitment to collaboration and accountability. We work closely with stakeholders at every stage of the project lifecycle—from ideation and design to development, deployment, and ongoing support. Regular communication, clear timelines, and quality-driven delivery are central to how we operate.</p>
-            <p>As a technology partner, we focus not just on delivering software, but on creating long-term value. Our goal is to empower businesses with solutions that are efficient today, adaptable tomorrow, and aligned with their long-term vision for growth and innovation.</p>
+            <p>Sharviktech is a growing IT consulting and software development company committed to delivering reliable, scalable and cost-effective technology solutions to businesses across industries.</p>
+            <p>We partner with startups, small and medium enterprises and growing organizations to transform ideas into robust, high-quality digital products. Our approach focuses on understanding business objectives, applying the right technologies and delivering solutions that are secure, maintainable and future-ready.</p>
+            <p>At Sharviktech, our mission is to solve real time business challenges through technology. We design and develop software that enhance operational efficiency, improves user experience and supports long-term business growth. By combining technical expertise with transparent communication and structured process, we aim to be a trusted technology partner for our clients.</p>
+            <p>Our team brings strong expertise across web development, backend engineering, cloud platforms and modern frameworks such as .NET Core, Java, Nodejs, Python, Angular, React, GraphQL, AWS and Azure. We follow industry best practices in architecture, security and performance optimization to ensure our solutions scale seamlessly as business needs to evolve.</p>
+            <p>What sets Sharviktech apart is our commitment to collaboration and accountability. We work closely with stakeholders at every stage of the project lifecycle from ideation and design to development, deployment and ongoing support. Regular communication, clear timelines and quality-driven delivery are central to how we operate.</p>
+            <p>As a technology partner, we focus not just on delivering software, but on creating long-term value. Our goal is to empower businesses with solutions that are efficient today, adaptable tomorrow and aligned with their long-term vision for growth and innovation.</p>
         </div>
     </section>
 
@@ -319,8 +332,8 @@
             <div class="section-header">
                 <h2>Our Services</h2>
                 <p>
-                    Sharviktech delivers reliable, scalable, and future-ready technology solutions
-                    that help businesses innovate, grow, and stay competitive.
+                    Sharviktech delivers reliable, scalable and future-ready technology solutions
+                    that help businesses innovate, grow and stay competitive.
                 </p>
             </div>
 
@@ -331,15 +344,15 @@
                     <p>
                         We design and develop high-performance, responsive web applications using
                         modern technologies like Angular and React. Our solutions focus on usability,
-                        security, and scalability to support long-term business growth.
+                        security and scalability to support long-term business growth.
                     </p>
                 </div>
 
                 <div class="service-card">
                     <h3>Backend & API Development</h3>
                     <p>
-                        Our backend experts build robust, secure, and scalable APIs using .NET and Java.
-                        We ensure seamless integration, optimized performance, and enterprise-grade reliability.
+                        Our backend experts build robust, secure and scalable APIs using .NET and Java.
+                        We ensure seamless integration, optimized performance and enterprise-grade reliability.
                     </p>
                 </div>
 
@@ -355,7 +368,7 @@
                     <h3>Cloud & DevOps Solutions</h3>
                     <p>
                         We help businesses leverage cloud platforms like AWS and Azure with DevOps best practices,
-                        enabling faster deployments, improved scalability, and reduced operational costs.
+                        enabling faster deployments, improved scalability and reduced operational costs.
                     </p>
                 </div>
 
@@ -363,15 +376,15 @@
                     <h3>IT Consulting & Architecture</h3>
                     <p>
                         Our consulting services guide startups and enterprises in choosing the right
-                        technology stack, system architecture, and development strategy to achieve business goals.
+                        technology stack, system architecture and development strategy to achieve business goals.
                     </p>
                 </div>
 
                 <div class="service-card">
                     <h3>Database Design & Optimization</h3>
                     <p>
-                        We design, manage, and optimize databases such as SQL Server, Oracle, and MySQL,
-                        ensuring data security, performance, and reliability.
+                        We design, manage and optimize databases such as SQL Server, Oracle and MySQL,
+                        ensuring data security, performance and reliability.
                     </p>
                 </div>
 
