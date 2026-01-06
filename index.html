@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sharviktech | Quick Pro Solutions Delivered.</title>
+    <title>Sharviktech | Quick Pro Solutions Delivered</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sharviktech delivers scalable web, mobile, cloud and enterprise software solutions for startups and growing businesses.">
 
@@ -19,72 +19,282 @@
             --card: #ffffff;
         }
 
-        * { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--dark); line-height: 1.65; }
-        h1, h2, h3 { text-align: center; margin-top: 0; }
-        p { color: var(--muted); text-align: center; }
-        a { text-decoration: none; }
-        .container { max-width: 1150px; margin: auto; padding: 24px; }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--dark);
+            line-height: 1.65;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        p {
+            color: var(--muted);
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 24px;
+        }
 
         /* Buttons */
-        .btn { padding: 14px 24px; border-radius: 12px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); transition: .2s; display: inline-block; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,.15); }
-        .btn.outline { background: #fff; color: var(--primary); border: 2px solid var(--primary); }
+        .btn {
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transition: .2s;
+            display: inline-block;
+        }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 24px rgba(0,0,0,.15);
+            }
+
+            .btn.outline {
+                background: #fff;
+                color: var(--primary);
+                border: 2px solid var(--primary);
+            }
 
         /* HEADER */
-        header { position: sticky; top: 0; z-index: 100; background: linear-gradient(135deg, #eef2ff, #ecfeff); border-bottom: 1px solid #dbeafe; }
-        .header-wrap { display: flex; align-items: center; justify-content: space-between; }
-        .brand { display: flex; gap: 12px; align-items: center; }
-        .brand img { height: 48px; border-radius: 8px; }
-        .brand strong { font-size: 20px; color: var(--primary); }
-        nav a { margin-left: 14px; padding: 10px 18px; border-radius: 999px; font-weight: 600; color: #4338ca; transition: all .25s ease; }
-        nav a:hover { color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: 0 6px 18px rgba(79,70,229,.25); }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(135deg, #eef2ff, #ecfeff);
+            border-bottom: 1px solid #dbeafe;
+        }
+
+        .header-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+            .brand img {
+                height: 60px;
+                border-radius: 8px;
+            }
+
+            .brand strong {
+                font-size: 25px;
+                color: var(--primary);
+            }
+
+        nav a {
+            margin-left: 14px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            color: #4338ca;
+            transition: all .25s ease;
+        }
+
+            nav a:hover {
+                color: #fff;
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+                box-shadow: 0 6px 18px rgba(79,70,229,.25);
+            }
 
         /* HERO */
-        .hero { margin-top: 40px; padding: 80px 40px; background: linear-gradient(135deg, #eef2ff, #ecfeff); border-radius: 28px; text-align: center; animation: fadeIn 1s ease-in; }
-        .hero h1 { font-size: 44px; max-width: 800px; margin: auto; }
-        .hero p { max-width: 760px; margin: 16px auto 0; font-size: 17px; }
-        .badges span { display: inline-block; margin: 6px; padding: 6px 14px; border-radius: 999px; background: #fff; font-size: 13px; font-weight: 600; color: var(--primary); }
+        .hero {
+            margin-top: 40px;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #eef2ff, #ecfeff);
+            border-radius: 28px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
 
-        section { margin-top: 90px; }
+            .hero h1 {
+                font-size: 44px;
+                max-width: 800px;
+                margin: auto;
+            }
+
+            .hero p {
+                max-width: 760px;
+                margin: 16px auto 0;
+                font-size: 17px;
+            }
+
+        .badges span {
+            display: inline-block;
+            margin: 6px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        section {
+            margin-top: 90px;
+        }
 
         /* GRID */
-        .grid { display: grid; gap: 28px; }
-        .grid-3 { grid-template-columns: repeat(5, 1fr); }
-        .grid-4 { grid-template-columns: repeat(3, 1fr); }
+        .grid {
+            display: grid;
+            gap: 28px;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         /* CARD WITH ANIMATION */
-        .card { background: var(--card); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.06); transition: .25s; text-align: center; opacity: 0; transform: translateY(20px); }
-        .card.visible { opacity: 1; transform: translateY(0); transition: all 0.6s ease-out; }
-        .card img { width: 100px; border-radius: 12px; margin-bottom: 14px; }
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+            transition: .25s;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+        }
 
-        .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,.08); }
+            .card.visible {
+                opacity: 1;
+                transform: translateY(0);
+                transition: all 0.6s ease-out;
+            }
+
+            .card img {
+                width: 100px;
+                border-radius: 12px;
+                margin-bottom: 14px;
+            }
+
+            .card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 18px 40px rgba(0,0,0,.08);
+            }
 
         /* TABS */
-        .tabs { display: flex; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; gap: 10px; }
-        .tab { padding: 12px 24px; border-radius: 999px; cursor: pointer; font-weight: 600; background: #fff; border: 2px solid var(--primary); transition: all .3s; }
-        .tab.active { background: var(--primary); color: #fff; }
-        .tab-content { display: none; }
-        .tab-content.active { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+            gap: 10px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            background: #fff;
+            border: 2px solid var(--primary);
+            transition: all .3s;
+        }
+
+            .tab.active {
+                background: var(--primary);
+                color: #fff;
+            }
+
+        .tab-content {
+            display: none;
+        }
+
+            .tab-content.active {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
 
         /* FOOTER */
-        footer { margin-top: 100px; background: #020617; color: #cbd5f5; padding: 60px 0; }
-        .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
-        .footer-social { display: flex; gap: 18px; }
-        .footer-social img { width: 26px; filter: brightness(0) invert(1); transition: opacity .2s; }
-        .footer-social img:hover { opacity: .7; }
+        footer {
+            margin-top: 100px;
+            background: #020617;
+            color: #cbd5f5;
+            padding: 60px 0;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            text-align: center;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 18px;
+        }
+
+            .footer-social img {
+                width: 26px;
+                filter: brightness(0) invert(1);
+                transition: opacity .2s;
+            }
+
+                .footer-social img:hover {
+                    opacity: .7;
+                }
 
         /* Responsive */
-        @media (max-width: 900px) { nav { display: none; } .grid-3 { grid-template-columns: 1fr; }
+        @media (max-width: 900px) {
+            nav {
+                display: none;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
             .grid-4 {
                 grid-template-columns: 1fr;
-            } .hero h1 { font-size: 32px; }
+            }
 
-
+            .hero h1 {
+                font-size: 32px;
+            }
         }
 
         /* Animations */
-        @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px);} 100% { opacity: 1; transform: translateY(0);} }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         /* About section styling */
         #about .hero {
@@ -93,18 +303,20 @@
             animation: fadeIn 1s ease-in;
             line-height: 1.7;
         }
-        #about .hero h2 {
-            font-size: 36px;
-            margin-bottom: 24px;
-            color: var(--primary);
-        }
-        #about .hero p {
-            max-width: 800px;
-            margin: 12px auto;
-            color: var(--dark);
-            font-size: 16px;
-            text-align: left;
-        }
+
+            #about .hero h2 {
+                font-size: 36px;
+                margin-bottom: 24px;
+                color: var(--primary);
+            }
+
+            #about .hero p {
+                max-width: 800px;
+                margin: 12px auto;
+                color: var(--dark);
+                font-size: 16px;
+                text-align: left;
+            }
 
         @media (min-width: 768px) {
             #about .hero p {
@@ -116,170 +328,170 @@
             }
         }
 
-            /* Card content */
-            .card-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 12px;
+        /* Card content */
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+            .card-content img {
+                width: 96px;
+                height: 96px;
+                object-fit: contain;
             }
 
-                .card-content img {
-                    width: 96px;
-                    height: 96px;
-                    object-fit: contain;
-                }
+        /* Smaller technology cards */
+        #technologies .card, #ai-data .card {
+            padding: 20px;
+        }
 
-            /* Smaller technology cards */
-            #technologies .card, #ai-data .card {
-                padding: 20px;
+            #technologies .card img, #ai-data .card img {
+                width: 72px;
+                height: 72px;
             }
 
-                #technologies .card img, #ai-data .card img {
-                    width: 72px;
-                    height: 72px;
-                }
+        #technologies p, #ai-data p {
+            font-size: 14px;
+        }
 
-            #technologies p, #ai-data p {
-                font-size: 14px;
-            }
+        /* Contact form styling */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 24px auto 0;
+            gap: 16px;
+        }
 
-            /* Contact form styling */
-            .contact-form {
-                display: flex;
-                flex-direction: column;
-                max-width: 600px;
-                margin: 24px auto 0;
-                gap: 16px;
-            }
-
-                .contact-form input,
-                .contact-form textarea {
-                    padding: 14px 18px;
-                    border: 2px solid #dbeafe;
-                    border-radius: 12px;
-                    font-size: 16px;
-                    font-family: 'Inter', sans-serif;
-                    transition: all 0.3s ease;
-                    outline: none;
-                    width: 100%;
-                    box-sizing: border-box;
-                }
-
-                    .contact-form input:focus,
-                    .contact-form textarea:focus {
-                        border-color: var(--primary);
-                        box-shadow: 0 4px 12px rgba(79,70,229,0.25);
-                    }
-
-                .contact-form textarea {
-                    min-height: 140px;
-                    resize: vertical;
-                }
-
-                .contact-form button {
-                    width: fit-content;
-                    align-self: center;
-                    padding: 14px 32px;
-                    font-weight: 700;
-                    border-radius: 12px;
-                    cursor: pointer;
-                }
-
-            @media (max-width: 700px) {
-                .contact-form button {
-                    width: 100%;
-                }
-            }
-
-            .services-section {
-                padding: 80px 20px;
-                background: #f8fafc;
-            }
-
-            .technology-section {
-                padding: 120px 20px;
-                background: #f8fafc;
-            }
-
-            .work-section {
-                padding: 120px 20px;
-                background: #f8fafc;
-            }
-
-            .services-section .container {
-                max-width: 1200px;
-                margin: auto;
-            }
-
-            .section-header {
-                text-align: center;
-                margin-bottom: 50px;
-            }
-
-                .section-header h2 {
-                    font-size: 36px;
-                    font-weight: 700;
-                    color: #0f172a;
-                }
-
-                .section-header p {
-                    max-width: 700px;
-                    margin: 15px auto 0;
-                    font-size: 16px;
-                    color: #64748b;
-                }
-
-            .services-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 25px;
-            }
-
-            .service-card {
-                background: #ffffff;
-                padding: 30px;
-                border-radius: 14px;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            .contact-form input,
+            .contact-form textarea {
+                padding: 14px 18px;
+                border: 2px solid #dbeafe;
+                border-radius: 12px;
+                font-size: 16px;
+                font-family: 'Inter', sans-serif;
                 transition: all 0.3s ease;
+                outline: none;
+                width: 100%;
+                box-sizing: border-box;
             }
 
-                .service-card:hover {
-                    transform: translateY(-6px);
-                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+                .contact-form input:focus,
+                .contact-form textarea:focus {
+                    border-color: var(--primary);
+                    box-shadow: 0 4px 12px rgba(79,70,229,0.25);
                 }
 
-                .service-card h3 {
-                    font-size: 20px;
-                    margin-bottom: 12px;
-                    color: #4f46e5;
-                }
-
-                .service-card p {
-                    font-size: 15px;
-                    line-height: 1.7;
-                    color: #475569;
-                }
-
-            .services-cta {
-                text-align: center;
-                margin-top: 50px;
+            .contact-form textarea {
+                min-height: 140px;
+                resize: vertical;
             }
 
-            .btn-primary {
-                display: inline-block;
-                padding: 14px 36px;
-                background: #4f46e5;
-                color: #ffffff;
-                font-weight: 600;
-                border-radius: 30px;
-                transition: background 0.3s ease;
+            .contact-form button {
+                width: fit-content;
+                align-self: center;
+                padding: 14px 32px;
+                font-weight: 700;
+                border-radius: 12px;
+                cursor: pointer;
             }
 
-                .btn-primary:hover {
-                    background: #4338ca;
-                }
+        @media (max-width: 700px) {
+            .contact-form button {
+                width: 100%;
+            }
+        }
+
+        .services-section {
+            padding: 87px 20px;
+            background: #f8fafc;
+        }
+
+        .technology-section {
+            padding: 120px 20px;
+            background: #f8fafc;
+        }
+
+        .work-section {
+            padding: 120px 20px;
+            background: #f8fafc;
+        }
+
+        .services-section .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+            .section-header h2 {
+                font-size: 36px;
+                font-weight: 700;
+                color: #0f172a;
+            }
+
+            .section-header p {
+                max-width: 700px;
+                margin: 15px auto 0;
+                font-size: 16px;
+                color: #64748b;
+            }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+            .service-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            }
+
+            .service-card h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+                color: #4f46e5;
+            }
+
+            .service-card p {
+                font-size: 15px;
+                line-height: 1.7;
+                color: #475569;
+            }
+
+        .services-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 14px 36px;
+            background: #4f46e5;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: background 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background: #4338ca;
+            }
 
         .hero-buttons {
             display: flex;
@@ -301,7 +513,6 @@
                 gap: 14px; /* Vertical spacing */
             }
         }
-
     </style>
 </head>
 
@@ -313,7 +524,7 @@
                 <img src="https://sharviktech.com/sharviktech.jpeg" alt="Sharviktech Logo">
                 <div>
                     <strong>Sharviktech</strong><br>
-                    <small>Quick Pro Solutions Delivered.</small>
+                    <small>Quick Pro Solutions Delivered</small>
                 </div>
             </div>
             <nav>
@@ -334,7 +545,7 @@
                 <a href="#contact" class="btn">Get Free Consultation</a>
                 <a href="#portfolio" class="btn outline" style="margin-left:14px">View Our Work</a>
             </div>
-          
+
         </div>
     </section>
 
@@ -413,7 +624,7 @@
 
             </div>
 
-          
+
         </div>
     </section>
 
@@ -422,7 +633,7 @@
         <div class="section-header">
             <h2>Technologies We Use</h2>
         </div>
-        
+
         <div class="grid grid-3">
             <div class="card"><img src="https://img.icons8.com/color/96/000000/angularjs.png" /><p>Angular, React, TypeScript</p></div>
             <div class="card"><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png" /><p>.NET Core, Java, REST APIs</p></div>
@@ -468,25 +679,25 @@
 
     <section id="contact" class="container">
         <div class="hero" style="padding:60px 40px; border-radius:20px;">
-                <h2 style="font-size:36px">Contact Sharviktech</h2>
-                <p>Send us a message and let's start building something great!</p>
+            <h2 style="font-size:36px">Contact Sharviktech</h2>
+            <p>Send us a message and let's start building something great!</p>
 
-                <form action="https://formsubmit.co/9605c817aa64f7c430e9ad6c11d52108"
-                      method="POST"
-                      class="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required />
-                    <input type="email" name="email" placeholder="Your Email" required />
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-</section>
+            <form action="https://formsubmit.co/9605c817aa64f7c430e9ad6c11d52108"
+                  method="POST"
+                  class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="container footer-brand">
             <img src="https://sharviktech.com/sharviktech.jpeg" height="44">
             <strong>Sharviktech</strong>
-            <small>Quick Pro Solutions Delivered.</small>
+            <small>Quick Pro Solutions Delivered</small>
 
             <div class="footer-social">
                 <a href="https://www.linkedin.com/company/sharviktech" target="_blank" aria-label="Sharviktech LinkedIn">
